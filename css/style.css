@@ -67,6 +67,9 @@
     background-color: #000000;
     opacity: 0.6;
   }
+  .block-logo-1 {
+    display: none;
+  }
   .menu__burger {
     display: none;
   }
@@ -95,7 +98,7 @@
   }
   
   h1 {
-    width: 690px;
+    max-width: 690px;
     text-transform: uppercase;
     color: #ffffff;
     font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
@@ -234,7 +237,6 @@
   
   .main-news {
     max-width: 800px;
-    height: 100%;
     box-sizing: border-box;
   }
   .post-news {
@@ -563,6 +565,7 @@
     font-size: 20px;
     color: black;
   }
+
   .text-products {
     margin-top: 15px;
   }
@@ -576,6 +579,7 @@
   .price-button {
     margin: 0px;
     display: flex;
+    justify-content: space-between;
   }
   .price {
     display: block;
@@ -606,12 +610,14 @@
     width: 140px;
     height: 50px;
     margin-top: 15px;
-    margin-left: 120px;
     font-weight: 700;
     font-family: OpenSans-Bold;
     font-size: 13px;
     text-transform: uppercase;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .button-shop:hover {
     opacity: 0.6;
@@ -696,8 +702,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000000;
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -705,19 +710,14 @@
   }
   .form-fidbek {
     display: block;
-    width: 390px;
-    height: 500px;
+    max-width: 390px;
+    padding: 50px 30px 55px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .text-head {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-  }
+    text-align: center;
+   }
   .head-form {
     text-transform: uppercase;
     font-weight: 700;
@@ -743,7 +743,6 @@
   .form-fidbek-main {
     display: block;
     width: 330px;
-    height: 260px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -811,11 +810,12 @@
     height: 10px;
     width: 10px;
   }
-  .button-group {
-    margin-left: 15px;
-  }
+textarea {
+    resize: none;
+    min-height: 130px;
+}
   .button-fitbek {
-    width: 300px;
+    width: 100%;
     height: 50px;
   
     background-color: #b59f5b;
@@ -830,11 +830,19 @@
   }
   
   @media (min-width: 768px) and (max-width: 1199px) {
-    .menu-list {
-      display: none;
+    .header {
+        background-image: url("https://i.ibb.co/r5xWqpp/banner-bg-tablet.jpg");
     }
-    .menu__burger {
-      display: flex;
+    .logo-menu {
+        width: 100vw;
+    }
+    .menu-list {
+        display: none;
+      }
+      .menu__burger {
+        display: flex;
+        margin-right: 50px;
+        background-color: rgba(0,0,0,0.1);
     }
     .block-trend {
       flex-wrap: wrap;
@@ -852,15 +860,23 @@
       width: 100vw;
     }
     .main-news {
-      max-width: 60vw;
+      max-width:100%;
     }
     .post-news {
-      flex-wrap: wrap;
-      width: 400px;
+        display: block;
     }
-    .blocks-aside {
-      max-width: 30vw;
-    }
+
+    .post-news:after {
+        display: block;
+        content: "";
+        color: #ececec;
+        width: 100%;
+        height: 3px;
+        background-color: #ececec;
+        margin-bottom: 25px;
+        margin-top: 15px;
+      }
+   
     .list-our-products {
       display: grid;
       width: 100%;
@@ -869,26 +885,50 @@
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
     }
+    .block-our-products:nth-of-type(n + 3) {
+        margin-top: 30px;
+    }
+    .social-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 80px; 
+    }
     .form-fidbek {
       width: 60vw;
-      height: 60vh;
     }
   }
   
   @media (max-width: 767px) {
     body {
-      width: 100vw;
+      width: 100%;
+    }
+    .header {
+        background-image: url("https://i.ibb.co/5WL0DQz/banner-mobile.jpg");
     }
     .block-logo {
-      display: none;
+        display: none;
+      }
+    .block-logo-1 {
+        width: 270px;
+        display: inline-block;
+        }
+    .title-logo {
+        width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
     }
-  
+    .block-menu {
+        margin-left: 350px;
+    }
     .menu-list {
       display: none;
     }
     .menu__burger {
       display: flex;
-      margin-right: 0px;
+      margin-right: 15px;
     }
     .block-trend {
       flex-wrap: wrap;
@@ -907,9 +947,18 @@
       max-width: 100%;
     }
     .post-news {
-      flex-wrap: wrap;
-      width: 100%;
+     display: block;
     }
+    .post-news:after {
+        display: block;
+        content: "";
+        color: #ececec;
+        width: 100%;
+        height: 3px;
+        background-color: #ececec;
+        margin-bottom: 25px;
+        margin-top: 15px;
+      }
     .text-news {
       width: 50%;
     }
@@ -917,6 +966,11 @@
       width: 100%;
       margin-right: auto;
       margin-right: left;
+    }
+    block-aside {
+        width: 100%;
+        margin-right: auto;
+        margin-right: left;  
     }
     .list-our-products {
       display: grid;
@@ -926,9 +980,44 @@
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-columns: 1fr;
     }
+    .block-our-products:nth-of-type(n + 2) {
+        margin-top: 50px;
+    }
+    .social-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 80px;  
+    }
     .form-fidbek {
-      width: 90vw;
-      height: 90vh;
+      width: 90%;
+  
     }
   }
-  
+  @media (min-width: 641px) and (max-width: 1199PX) and (orientation: landscape) {
+    .block-trend {
+        flex-wrap: wrap;
+      }
+      .trend-post-garden,
+      .trend-post-cheese,
+      .trend-post-mounts,
+      .trend-post-vitamin {
+        width: 24%;
+        margin-right: auto;
+        margin-right: left;
+      }
+  }
+  @media (min-width: 640px) and (orientation: landscape) {
+    .block-trend {
+        flex-wrap: wrap;
+      }
+      .trend-post-garden,
+      .trend-post-cheese,
+      .trend-post-mounts,
+      .trend-post-vitamin {
+        width: 49%;
+        margin-right: auto;
+        margin-right: left;
+      }
+  }
