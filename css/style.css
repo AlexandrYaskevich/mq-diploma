@@ -1,1023 +1,1057 @@
 @font-face {
-    font-family: OpenSans-Regular;
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: OpenSans-Bold;
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  .list:hover {
-    color: #b59f5b;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: OpenSans-Regular;
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+.list:hover {
+  color: #b59f5b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 125px;
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 0;
+}
+header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.45;
+
+  z-index: -1;
+}
+
+.logo-menu {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1160px;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block-logo {
+  width: 175px;
+}
+.block-logo:hover {
+  background-color: #000000;
+  opacity: 0.6;
+}
+.block-logo-1 {
+  display: none;
+}
+.menu__burger {
+  display: none;
+}
+.icon-burger {
+  fill: white;
+}
+
+.menu-list-item {
+  display: inline-block;
+}
+
+.menu-list-item:nth-of-type(n + 2) {
+  margin-left: 30px;
+}
+
+.menu-list {
+  list-style-type: none;
+}
+
+.list {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: OpenSans-Regular;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 690px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 92px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2.general-heading {
+  margin-top: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  line-height: 1.3;
+  font-size: 20px;
+  color: black;
+}
+
+h2.general-heading::after {
+  display: block;
+  content: "";
+  color: #b59f5b;
+  width: 65px;
+  height: 3px;
+  background-color: #b59f5b;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.block-trend {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+.trend-post-garden,
+.trend-post-cheese,
+.trend-post-mounts,
+.trend-post-vitamin {
+  height: 320px;
+  width: 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.trend-post-garden::after,
+.trend-post-cheese::after,
+.trend-post-mounts::after,
+.trend-post-vitamin::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.45;
+
+  z-index: -1;
+}
+
+.trend-post-garden {
+  background-image: url("https://i.ibb.co/L8cBKNg/trend1.jpg");
+}
+
+.head-news-trend {
+  border: 3px solid #b59f5b;
+  margin: 20px 20px 10px 20px;
+  padding: 40px 40px 35px;
+}
+
+.name-subject-trend {
+  display: flex;
+  list-style-type: none;
+}
+
+.mini-subject-trend:nth-of-type(n + 2) {
+  margin-left: 20px;
+}
+.mini-subject-trend:hover {
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.subject-list {
+  text-transform: uppercase;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #b59f5b;
+  font-size: 12px;
+}
+
+h2.heading-news-trend {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  line-height: 1.3;
+  font-size: 20px;
+  color: white;
+}
+
+.trend-post-cheese {
+  background-image: url("https://i.ibb.co/T187Y12/trend2.jpg");
+}
+
+.trend-post-mounts {
+  background-image: url("https://i.ibb.co/8rdzkd0/trend3.jpg");
+}
+
+.trend-post-vitamin {
+  background-image: url("https://i.ibb.co/6sjBH6d/trend4.jpg");
+}
+
+.block-main-and-aside {
+  display: flex;
+  width: 1200px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-news {
+  max-width: 800px;
+  box-sizing: border-box;
+}
+.post-news {
+  display: flex;
+  margin-top: 63px;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.news-picture {
+  margin-right: 30px;
+  width: 381px;
+}
+.news-picture:hover {
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.name-subject {
+  display: flex;
+  list-style-type: none;
+}
+
+.mini-subject:nth-of-type(n + 2) {
+  margin-left: 20px;
+}
+.mini-subject:hover {
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.subject-list {
+  text-transform: uppercase;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #b59f5b;
+  font-size: 12px;
+}
+
+h2.heading-news {
+  margin-top: 5px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  line-height: 1.3;
+  font-size: 20px;
+  color: black;
+}
+
+.signature {
+  display: flex;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.news-date {
+  color: grey;
+  font-weight: 400;
+  font-family: OpenSans-Regular;
+  font-size: 11px;
+}
+
+.author {
+  margin-left: 15px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  font-size: 11px;
+}
+
+p {
+  margin-top: 50px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: OpenSans-Regular;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.paragraph {
+  margin-top: 15px;
+}
+
+.blocks-aside {
+  max-width: 270px;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.header-aside {
+  text-transform: uppercase;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+}
+
+.header-aside::after {
+  display: block;
+  content: "";
+  color: #b59f5b;
+  width: 65px;
+  height: 3px;
+  background-color: #b59f5b;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.aside-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+.aside-section:last-of-type {
+  margin-bottom: 60px;
+}
+
+.news-picture-aside {
+  width: 70px;
+  height: 70px;
+  margin-right: 18px;
+}
+.news-date-aside {
+  color: grey;
+  font-weight: 400;
+  font-family: OpenSans-Regular;
+  font-size: 12px;
+}
+.heading-news-aside {
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  line-height: 1.5;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.field-label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+}
+
+.field {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  background-color: #f5f7f6;
+  border: 0px solid;
+  padding: 18px;
+
+  font-weight: 400;
+  font-family: OpenSans-Regular;
+  font-size: 13px;
+}
+
+.block-asside-mailing {
+  margin-top: 60px;
+}
+
+.button {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #b59f5b;
+  border: 0px solid;
+  margin-left: -50px;
+
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center center;
+}
+
+.news-picture-aside:hover,
+h3:hover,
+.field:focus,
+.field:hover,
+.button:hover,
+.button:focus,
+.button-submit:hover,
+.button-submit:focus {
+  outline: 2px solid #b59f5b;
+  outline-offset: 3px;
+}
+
+h2:hover {
+  outline: 2px solid #b59f5b;
+  outline-offset: 3px;
+}
+h2.general-heading {
+  outline: none;
+}
+.button-submit {
+  height: 50px;
+  width: 50px;
+  background-color: #b59f5b;
+  border: 0px solid;
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+
+  font-weight: 700;
+  font-family: OpenSans-Bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.block-asside-tags {
+  margin-top: 60px;
+  max-width: 270px;
+  height: 100%;
+}
+
+.tags-list {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 270px;
+  flex-wrap: wrap;
+}
+.tag-list {
+  display: inline-block;
+
+  text-transform: uppercase;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+
+  border: 2px solid #eeeeee;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+.tag-list-aside {
+  color: black;
+}
+
+.tag-list:hover {
+  outline: 2px solid #b59f5b;
+  outline-offset: 2px;
+}
+
+.block-asside-themes {
+  margin-top: 53px;
+  max-width: 270px;
+  height: 100%;
+}
+
+.theme-list {
+  list-style-type: none;
+  font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.themes-list-aside {
+  color: black;
+}
+.themes-list-aside:hover {
+  outline: 2px solid #b59f5b;
+  outline-offset: 3px;
+}
+
+.numbers {
+  color: #b59f5b;
+  margin-left: 5px;
+  vertical-align: super;
+}
+
+.theme-list::after {
+  display: block;
+  content: "";
+  color: #efefef;
+  width: 270px;
+  height: 2px;
+  background-color: #efefef;
+  margin-bottom: 13px;
+  margin-top: 13px;
+}
+
+.our-products {
+  display: block;
+}
+
+.list-our-products {
+  display: flex;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 115px;
+}
+.block-our-products {
+  width: 33%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.all-block-product {
+  outline: 4px solid #b59f5b;
+  outline-offset: 30px;
+  height: 205px;
+  width: 300px;
+}
+
+h2.heading-product {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  line-height: 1.3;
+  font-size: 20px;
+  color: black;
+}
+
+.text-products {
+  margin-top: 15px;
+}
+.link-product {
+  color: #b59f5b;
+}
+.link-product:hover {
+  border: 2px solid #b59f5b;
+}
+
+.price-button {
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  display: block;
+}
+p.old-price {
+  margin: 15px 0px 0px 0px;
+  text-decoration: line-through;
+  font-size: 14px;
+  font-family: OpenSans-Bold;
+  font-weight: 700;
+  font-style: normal;
+}
+p.actual-price {
+  margin: 0px;
+  font-size: 20px;
+  font-family: OpenSans-Bold;
+  font-weight: 700;
+  font-style: normal;
+}
+.old-price:after,
+.actual-price:after {
+  content: " \20BD";
+}
+.button-shop {
+  background-color: #b59f5b;
+  border: 0px solid;
+  width: 140px;
+  height: 50px;
+  margin-top: 15px;
+  font-weight: 700;
+  font-family: OpenSans-Bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-shop:hover {
+  opacity: 0.6;
+}
+
+.social-icons {
+  width: 1200px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  background-color: #f5f7f6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list-icons {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+}
+
+.social-icon-dribbble {
+  display: block;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-icon-pinterest {
+  display: block;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+}
+.social-icon-tumblr {
+  display: block;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+  height: 20px;
+  width: 20px;
+  margin-left: 30px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.footer-caption {
+  font-weight: 700;
+  font-family: OpenSans-Bold;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.copyright:hover {
+  background-color: #000000;
+  opacity: 0.6;
+}
+.copyright {
+  color: #939393;
+}
+
+.social-icon-dribbble:hover,
+.social-icon-pinterest:hover,
+.social-icon-tumblr:hover {
+  outline: 2px solid #b59f5b;
+  outline-offset: 3px;
+}
+
+div.pop-up_heidden {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.form-fidbek {
+  display: block;
+  max-width: 390px;
+  padding: 50px 30px 55px;
+  background-color: white;
+}
+.text-head {
+  display: block;
+  text-align: center;
+}
+.head-form {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-family: OpenSans-Bold;
+  line-height: 1.3;
+  font-size: 20px;
+  color: black;
+}
+.head-form:after {
+  display: block;
+  content: "";
+  color: #b59f5b;
+  width: 65px;
+  height: 3px;
+  background-color: #b59f5b;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.form-fidbek-main {
+  display: block;
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label {
+  margin-top: 40px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: OpenSans-Regular;
+  line-height: 1.3;
+  font-size: 14px;
+  color: black;
+}
+.radio-answer {
+  margin-top: 40px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: OpenSans-Regular;
+  line-height: 1.3;
+  font-size: 14px;
+  color: black;
+  margin-right: 15px;
+}
+.select {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 25px;
+  margin: 0;
+  background-color: #f9f9f9;
+  background-image: url("https://svgshare.com/i/xt8.svg");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 10px;
+  font-size: 13px;
+  font-family: OpenSans-Regular;
+  color: #333333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select:hover {
+  border: 2px solid #b59f5b;
+}
+.radio-email {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  position: relative;
+  height: 13px;
+  width: 13px;
+  border-radius: 13px;
+  background-color: #ffffff;
+  border: 1px solid #b59f5b;
+  box-sizing: border-box;
+}
+.radio-email:checked {
+  outline-offset: 3px;
+  outline: 2px solid #b59f5b;
+  background-color: #b59f5b;
+  height: 10px;
+  width: 10px;
+}
+textarea {
+  resize: none;
+  min-height: 130px;
+}
+.button-fitbek {
+  width: 100%;
+  height: 50px;
+
+  background-color: #b59f5b;
+  border: 0px solid;
+  margin-top: 15px;
+
+  font-weight: 700;
+  font-family: OpenSans-Bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
   .header {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
-    background-color: #000000;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-bottom: 125px;
-    margin: 0 auto;
-  
-    position: relative;
-  
-    z-index: 0;
+    background-image: url("https://i.ibb.co/r5xWqpp/banner-bg-tablet.jpg");
   }
-  header:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.45;
-  
-    z-index: -1;
-  }
-  
   .logo-menu {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1160px;
-    padding: 15px;
-    align-items: center;
-    justify-content: space-between;
+    width: 90%;
   }
-  
-  .block-logo {
-    width: 175px;
-  }
-  .block-logo:hover {
-    background-color: #000000;
-    opacity: 0.6;
-  }
-  .block-logo-1 {
+  .menu-list {
     display: none;
+  }
+  .block-menu {
+    margin-left: 200px;
   }
   .menu__burger {
-    display: none;
-  }
-  .icon-burger {
-    fill: white;
-  }
-  
-  .menu-list-item {
-    display: inline-block;
-  }
-  
-  .menu-list-item:nth-of-type(n + 2) {
-    margin-left: 30px;
-  }
-  
-  .menu-list {
-    list-style-type: none;
-  }
-  
-  .list {
-    color: #ffffff;
-    font-weight: 400;
-    font-family: OpenSans-Regular;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-  
-  h1 {
-    max-width: 690px;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 1.5;
-    text-align: center;
-    margin-top: 92px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  h2.general-heading {
-    margin-top: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    line-height: 1.3;
-    font-size: 20px;
-    color: black;
-  }
-  
-  h2.general-heading::after {
-    display: block;
-    content: "";
-    color: #b59f5b;
-    width: 65px;
-    height: 3px;
-    background-color: #b59f5b;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-    margin-top: 10px;
-  }
-  
-  .block-trend {
     display: flex;
-    width: 100%;
-    gap: 5px;
+    margin-left: 0px;
   }
-  
+  .button__burger {
+    border: 0px;
+    background: none;
+  }
+  .block-trend {
+    flex-wrap: wrap;
+  }
   .trend-post-garden,
   .trend-post-cheese,
   .trend-post-mounts,
   .trend-post-vitamin {
-    height: 320px;
-    width: 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  
-  .trend-post-garden::after,
-  .trend-post-cheese::after,
-  .trend-post-mounts::after,
-  .trend-post-vitamin::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.45;
-  
-    z-index: -1;
-  }
-  
-  .trend-post-garden {
-    background-image: url("https://i.ibb.co/L8cBKNg/trend1.jpg");
-  }
-  
-  .head-news-trend {
-    border: 3px solid #b59f5b;
-    margin: 20px 20px 10px 20px;
-    padding: 40px 40px 35px;
-  }
-  
-  .name-subject-trend {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .mini-subject-trend:nth-of-type(n + 2) {
-    margin-left: 20px;
-  }
-  .mini-subject-trend:hover {
-    background-color: #000000;
-    opacity: 0.6;
-  }
-  
-  .subject-list {
-    text-transform: uppercase;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #b59f5b;
-    font-size: 12px;
-  }
-  
-  h2.heading-news-trend {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    line-height: 1.3;
-    font-size: 20px;
-    color: white;
-  }
-  
-  .trend-post-cheese {
-    background-image: url("https://i.ibb.co/T187Y12/trend2.jpg");
-  }
-  
-  .trend-post-mounts {
-    background-image: url("https://i.ibb.co/8rdzkd0/trend3.jpg");
-  }
-  
-  .trend-post-vitamin {
-    background-image: url("https://i.ibb.co/6sjBH6d/trend4.jpg");
-  }
-  
-  .block-main-and-aside {
-    display: flex;
-    width: 1200px;
-    padding: 15px;
-    margin-left: auto;
+    width: 49%;
     margin-right: auto;
+    margin-right: left;
   }
-  
-  .main-news {
-    max-width: 800px;
+
+  .block-main-and-aside {
+    width: 100%;
     box-sizing: border-box;
+  }
+  .main-news {
+    max-width: 100%;
   }
   .post-news {
-    display: flex;
-    margin-top: 63px;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    overflow: hidden;
-  }
-  
-  .news-picture {
-    margin-right: 30px;
-    width: 381px;
-  }
-  .news-picture:hover {
-    background-color: #000000;
-    opacity: 0.6;
-  }
-  
-  .name-subject {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .mini-subject:nth-of-type(n + 2) {
-    margin-left: 20px;
-  }
-  .mini-subject:hover {
-    background-color: #000000;
-    opacity: 0.6;
-  }
-  
-  .subject-list {
-    text-transform: uppercase;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #b59f5b;
-    font-size: 12px;
-  }
-  
-  h2.heading-news {
-    margin-top: 5px;
-    margin-right: 5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    line-height: 1.3;
-    font-size: 20px;
-    color: black;
-  }
-  
-  .signature {
-    display: flex;
-    margin-top: 30px;
-    font-size: 13px;
-  }
-  
-  .news-date {
-    color: grey;
-    font-weight: 400;
-    font-family: OpenSans-Regular;
-    font-size: 11px;
-  }
-  
-  .author {
-    margin-left: 15px;
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    font-size: 11px;
-  }
-  
-  p {
-    margin-top: 50px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: OpenSans-Regular;
-    line-height: 1.5;
-    font-size: 15px;
-  }
-  .paragraph {
-    margin-top: 15px;
-  }
-  
-  .blocks-aside {
-    max-width: 270px;
-    margin-top: 60px;
-    margin-left: 100px;
-  }
-  
-  .header-aside {
-    text-transform: uppercase;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: black;
-    font-size: 12px;
-    text-align: center;
-  }
-  
-  .header-aside::after {
     display: block;
-    content: "";
-    color: #b59f5b;
-    width: 65px;
-    height: 3px;
-    background-color: #b59f5b;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-    margin-top: 10px;
+    border-bottom: 3px #ececec solid;
   }
-  
-  .aside-section {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  .aside-section:last-of-type {
-    margin-bottom: 60px;
-  }
-  
-  .news-picture-aside {
-    width: 70px;
-    height: 70px;
-    margin-right: 18px;
-  }
-  .news-date-aside {
-    color: grey;
-    font-weight: 400;
-    font-family: OpenSans-Regular;
-    font-size: 12px;
-  }
-  .heading-news-aside {
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    line-height: 1.5;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: black;
-  }
-  
-  .field-label {
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    width: 1px;
-  }
-  
-  .field {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    height: 50px;
-    background-color: #f5f7f6;
-    border: 0px solid;
-    padding: 18px;
-  
-    font-weight: 400;
-    font-family: OpenSans-Regular;
-    font-size: 13px;
-  }
-  
-  .block-asside-mailing {
-    margin-top: 60px;
-  }
-  
-  .button {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    background-color: #b59f5b;
-    border: 0px solid;
-    margin-left: -50px;
-  
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
-    background-repeat: no-repeat;
-    background-size: 23px;
-    background-position: center center;
-  }
-  
-  .news-picture-aside:hover,
-  h3:hover,
-  .field:focus,
-  .field:hover,
-  .button:hover,
-  .button:focus,
-  .button-submit:hover,
-  .button-submit:focus {
-    outline: 2px solid #b59f5b;
-    outline-offset: 3px;
-  }
-  
-  h2:hover {
-    outline: 2px solid #b59f5b;
-    outline-offset: 3px;
-  }
-  h2.general-heading {
-    outline: none;
-  }
-  .button-submit {
-    height: 50px;
-    width: 50px;
-    background-color: #b59f5b;
-    border: 0px solid;
-    width: 100%;
-    height: 50px;
-    margin-top: 15px;
-  
-    font-weight: 700;
-    font-family: OpenSans-Bold;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  
-  .block-asside-tags {
-    margin-top: 60px;
-    max-width: 270px;
-    height: 100%;
-  }
-  
-  .tags-list {
-    box-sizing: border-box;
-    display: flex;
-    max-width: 270px;
-    flex-wrap: wrap;
-  }
-  .tag-list {
-    display: inline-block;
-  
-    text-transform: uppercase;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 13px;
-    text-align: center;
-  
-    border: 2px solid #eeeeee;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 5px 10px;
-  }
-  .tag-list-aside {
-    color: black;
-  }
-  
-  .tag-list:hover {
-    outline: 2px solid #b59f5b;
-    outline-offset: 2px;
-  }
-  
-  .block-asside-themes {
-    margin-top: 53px;
-    max-width: 270px;
-    height: 100%;
-  }
-  
-  .theme-list {
-    list-style-type: none;
-    font-family: OpenSans-Bold, Arial Unicode MS, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 14px;
-  }
-  
-  .themes-list-aside {
-    color: black;
-  }
-  .themes-list-aside:hover {
-    outline: 2px solid #b59f5b;
-    outline-offset: 3px;
-  }
-  
-  .numbers {
-    color: #b59f5b;
-    margin-left: 5px;
-    vertical-align: super;
-  }
-  
-  .theme-list::after {
-    display: block;
-    content: "";
-    color: #efefef;
-    width: 270px;
-    height: 2px;
-    background-color: #efefef;
-    margin-bottom: 13px;
-    margin-top: 13px;
-  }
-  
-  .our-products {
-    display: block;
-  }
-  
+
   .list-our-products {
-    display: grid;
-    width: 1200px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 70px;
     margin-left: auto;
     margin-right: auto;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
   }
   .block-our-products {
-    width: 30%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .all-block-product {
-    outline: 4px solid #b59f5b;
-    outline-offset: 30px;
-    height: 205px;
-    width: 300px;
-  }
-  
-  h2.heading-product {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    line-height: 1.3;
-    font-size: 20px;
-    color: black;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .text-products {
-    margin-top: 15px;
+  .block-our-products:nth-of-type(n + 3) {
+    margin-top: 30px;
+    margin-left: 0px;
   }
-  .link-product {
-    color: #b59f5b;
-  }
-  .link-product:hover {
-    border: 2px solid #b59f5b;
-  }
-  
-  .price-button {
-    margin: 0px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .price {
-    display: block;
-  }
-  p.old-price {
-    width: 65px;
-    margin: 15px 0px 0px 0px;
-    text-decoration: line-through;
-    font-size: 12px;
-    font-family: OpenSans-Bold;
-    font-weight: 700;
-    font-style: normal;
-  }
-  p.actual-price {
-    width: 65px;
-    margin: 0px;
-    font-family: OpenSans-Bold;
-    font-weight: 700;
-    font-style: normal;
-  }
-  .old-price:after,
-  .actual-price:after {
-    content: " \20BD";
-  }
-  .button-shop {
-    background-color: #b59f5b;
-    border: 0px solid;
-    width: 140px;
-    height: 50px;
-    margin-top: 15px;
-    font-weight: 700;
-    font-family: OpenSans-Bold;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .button-shop:hover {
-    opacity: 0.6;
-  }
-  
   .social-icons {
-    width: 1200px;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    background-color: #f5f7f6;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .list-icons {
+    width: 100%;
     display: flex;
-    list-style-type: none;
     justify-content: center;
-  }
-  
-  .social-icon-dribbble {
-    display: block;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
-    width: 20px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .social-icon-pinterest {
-    display: block;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
-    width: 20px;
-    height: 20px;
-    margin-left: 30px;
-  }
-  .social-icon-tumblr {
-    display: block;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
-    height: 20px;
-    width: 20px;
-    margin-left: 30px;
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  
-  .footer-caption {
-    font-weight: 700;
-    font-family: OpenSans-Bold;
-    font-size: 12px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .copyright:hover {
-    background-color: #000000;
-    opacity: 0.6;
-  }
-  .copyright {
-    color: #939393;
-  }
-  
-  .social-icon-dribbble:hover,
-  .social-icon-pinterest:hover,
-  .social-icon-tumblr:hover {
-    outline: 2px solid #b59f5b;
-    outline-offset: 3px;
-  }
-  
-  div.pop-up_heidden {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
     align-items: center;
+    height: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    width: 100vw;
+  }
+  .header {
+    background-image: url("https://i.ibb.co/5WL0DQz/banner-mobile.jpg");
+    position: relative;
+  }
+  .logo-menu {
+    width: 100%;
     justify-content: center;
+    padding-top: 300px;
+  }
+  .block-logo {
+    width: 82%;
+  }
+  .welcome-title {
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  .menu-list {
     display: none;
   }
-  .form-fidbek {
-    display: block;
-    max-width: 390px;
-    padding: 50px 30px 55px;
-    background-color: white;
+  .menu__burger {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 50px;
   }
-  .text-head {
-    display: block;
-    text-align: center;
-   }
-  .head-form {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: normal;
-    font-family: OpenSans-Bold;
-    line-height: 1.3;
-    font-size: 20px;
-    color: black;
+  .button__burger {
+    border: 0px;
+    background: none;
   }
-  .head-form:after {
-    display: block;
-    content: "";
-    color: #b59f5b;
-    width: 65px;
-    height: 3px;
-    background-color: #b59f5b;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-    margin-top: 10px;
+  .block-trend {
+    flex-wrap: wrap;
   }
-  
-  .form-fidbek-main {
-    display: block;
-    width: 330px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .label {
-    margin-top: 40px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: OpenSans-Regular;
-    line-height: 1.3;
-    font-size: 14px;
-    color: black;
-  }
-  .radio-answer {
-    margin-top: 40px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: OpenSans-Regular;
-    line-height: 1.3;
-    font-size: 14px;
-    color: black;
-    margin-right: 15px;
-  }
-  .select {
-    display: inline-block;
-    box-sizing: border-box;
+  .trend-post-garden,
+  .trend-post-cheese,
+  .trend-post-mounts,
+  .trend-post-vitamin {
     width: 100%;
-    height: 50px;
-    outline: none;
-    border: none;
-    padding-left: 10px;
-    padding-right: 25px;
-    margin: 0;
-    background-color: #f9f9f9;
-    background-image: url("https://svgshare.com/i/xt8.svg");
-    background-repeat: no-repeat;
-    background-position: right 5px center;
-    background-size: 10px;
-    font-size: 13px;
-    font-family: OpenSans-Regular;
-    color: #333333;
-    -webkit-appearance: none;
-    -moz-appearance: none;
   }
-  .select:hover {
-    border: 2px solid #b59f5b;
-  }
-  .radio-email {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    display: inline-block;
-    position: relative;
-    height: 13px;
-    width: 13px;
-    border-radius: 13px;
-    background-color: #ffffff;
-    border: 1px solid #b59f5b;
-    box-sizing: border-box;
-  }
-  .radio-email:checked {
-    outline-offset: 3px;
-    outline: 2px solid #b59f5b;
-    background-color: #b59f5b;
-    height: 10px;
-    width: 10px;
-  }
-textarea {
-    resize: none;
-    min-height: 130px;
-}
-  .button-fitbek {
+  .block-main-and-aside {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 50px;
-  
-    background-color: #b59f5b;
-    border: 0px solid;
-    margin-top: 15px;
-  
-    font-weight: 700;
-    font-family: OpenSans-Bold;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #ffffff;
   }
-  
-  @media (min-width: 768px) and (max-width: 1199px) {
-    .header {
-        background-image: url("https://i.ibb.co/r5xWqpp/banner-bg-tablet.jpg");
-    }
-    .logo-menu {
-        width: 100vw;
-    }
-    .menu-list {
-        display: none;
-      }
-      .menu__burger {
-        display: flex;
-        margin-right: 50px;
-        background-color: rgba(0,0,0,0.1);
-    }
-    .block-trend {
-      flex-wrap: wrap;
-    }
-    .trend-post-garden,
-    .trend-post-cheese,
-    .trend-post-mounts,
-    .trend-post-vitamin {
-      width: 49%;
-      margin-right: auto;
-      margin-right: left;
-    }
-  
-    .block-main-and-aside {
-      width: 100vw;
-    }
-    .main-news {
-      max-width:100%;
-    }
-    .post-news {
-        display: block;
-    }
+  .main-news {
+    width: 100%;
+  }
+  .post-news {
+    display: block;
+    border-bottom: 3px #ececec solid;
+  }
 
-    .post-news:after {
-        display: block;
-        content: "";
-        color: #ececec;
-        width: 100%;
-        height: 3px;
-        background-color: #ececec;
-        margin-bottom: 25px;
-        margin-top: 15px;
-      }
-   
-    .list-our-products {
-      display: grid;
-      width: 100%;
-      gap: 5px;
-  
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
-    .block-our-products:nth-of-type(n + 3) {
-        margin-top: 30px;
-    }
-    .social-icons {
-        width: 100%;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        height: 80px; 
-    }
-    .form-fidbek {
-      width: 60vw;
-    }
+  .news-picture {
+    width: 100%;
   }
-  
-  @media (max-width: 767px) {
-    body {
-      width: 100%;
-    }
-    .header {
-        background-image: url("https://i.ibb.co/5WL0DQz/banner-mobile.jpg");
-    }
-    .block-logo {
-        display: none;
-      }
-    .block-logo-1 {
-        width: 270px;
-        display: inline-block;
-        }
-    .title-logo {
-        width: 270px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 150px;
-    }
-    .block-menu {
-        margin-left: 350px;
-    }
-    .menu-list {
-      display: none;
-    }
-    .menu__burger {
-      display: flex;
-      margin-right: 15px;
-    }
-    .block-trend {
-      flex-wrap: wrap;
-    }
-    .trend-post-garden,
-    .trend-post-cheese,
-    .trend-post-mounts,
-    .trend-post-vitamin {
-      width: 100%;
-    }
-    .block-main-and-aside {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .main-news {
-      max-width: 100%;
-    }
-    .post-news {
-     display: block;
-    }
-    .post-news:after {
-        display: block;
-        content: "";
-        color: #ececec;
-        width: 100%;
-        height: 3px;
-        background-color: #ececec;
-        margin-bottom: 25px;
-        margin-top: 15px;
-      }
-    .text-news {
-      width: 50%;
-    }
-    .blocks-aside {
-      width: 100%;
-      margin-right: auto;
-      margin-right: left;
-    }
-    block-aside {
-        width: 100%;
-        margin-right: auto;
-        margin-right: left;  
-    }
-    .list-our-products {
-      display: grid;
-      width: 100%;
-      gap: 5px;
-  
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr;
-    }
-    .block-our-products:nth-of-type(n + 2) {
-        margin-top: 50px;
-    }
-    .social-icons {
-        width: 100%;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        height: 80px;  
-    }
-    .form-fidbek {
-      width: 90%;
-  
-    }
+  .text-news {
+    width: 100%;
   }
-  @media (min-width: 641px) and (max-width: 1199PX) and (orientation: landscape) {
-    .block-trend {
-        flex-wrap: wrap;
-      }
-      .trend-post-garden,
-      .trend-post-cheese,
-      .trend-post-mounts,
-      .trend-post-vitamin {
-        width: 24%;
-        margin-right: auto;
-        margin-right: left;
-      }
+  .blocks-aside {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-right: left;
   }
-  @media (min-width: 640px) and (orientation: landscape) {
-    .block-trend {
-        flex-wrap: wrap;
-      }
-      .trend-post-garden,
-      .trend-post-cheese,
-      .trend-post-mounts,
-      .trend-post-vitamin {
-        width: 49%;
-        margin-right: auto;
-        margin-right: left;
-      }
+
+  .block-asside-tags {
+    max-width: 100%;
   }
+  .tags-list {
+    max-width: 100%;
+  }
+  .theme-list::after {
+    width: 100%;
+  }
+  .block-asside-themes {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .theme-list {
+    width: 100%;
+  }
+  .list-our-products {
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-right: left;
+  }
+  picture {
+    width: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .image-product {
+    width: 80%;
+  }
+
+  .block-our-products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .all-block-product {
+    width: 80%;
+  }
+
+  .block-our-products:nth-of-type(n + 2) {
+    margin-top: 50px;
+  }
+  .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .block-trend {
+    flex-wrap: wrap;
+  }
+  .trend-post-garden,
+  .trend-post-cheese,
+  .trend-post-mounts,
+  .trend-post-vitamin {
+    width: 24%;
+    margin-right: auto;
+    margin-right: left;
+  }
+}
+@media (max-width: 640px) and (orientation: landscape) {
+  .block-trend {
+    flex-wrap: wrap;
+  }
+  .trend-post-garden,
+  .trend-post-cheese,
+  .trend-post-mounts,
+  .trend-post-vitamin {
+    width: 49%;
+    margin-right: auto;
+    margin-right: left;
+  }
+}
+
