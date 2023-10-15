@@ -911,12 +911,14 @@ textarea {
     position: relative;
   }
   .logo-menu {
-    width: 100%;
+    width: 90%;
     justify-content: center;
     padding-top: 300px;
+
   }
   .block-logo {
     width: 82%;
+    padding-right: 0px;
   }
   .welcome-title {
     margin-top: 0px;
@@ -949,9 +951,13 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    box-sizing: border-box;
   }
   .main-news {
     width: 100%;
+  }
+  img.news-picture {
+    margin-right: 0px;
   }
   .post-news {
     display: block;
@@ -967,8 +973,7 @@ textarea {
   .blocks-aside {
     max-width: 100%;
     margin-left: 0px;
-    margin-right: auto;
-    margin-right: left;
+    margin-right: 0px;
   }
 
   .block-asside-tags {
